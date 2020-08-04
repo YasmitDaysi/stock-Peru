@@ -1,0 +1,85 @@
+<div class="container">
+<h1>Stock  Perú</h1>
+  <div class="ordenar">
+
+    <button class="orderByTypeSac" (click)="orderByTypeSac()"> <p>empresas SAC</p> </button>
+    <button class="orderByTypeEirl" (click)="orderByTypeEirl()"> <p> empresas EIRL</p></button>
+    <button class="sortBySon" (click)="sortBySon()"> <p>Hijos mayor a menor</p></button>
+    <button class="userOrderByPayment" (click)="userOrderByPayment()"> <p>Usuarios que pagaron</p></button>
+    <button class="usersNotPay" (click)=" usersNotPay()"> <p>Usuarios que no pagaron</p></button>
+
+  </div>
+
+  <div class="result">
+    <div *ngIf="displaySac">
+
+      <table style="width:100%">
+        <tr>
+          <th>Nombre</th>
+          <th>empresa</th>
+
+        </tr>
+        <tr  *ngFor="let item of arrayTipoSac">
+            <td>{{item.nombre}}</td>
+          <td>{{item.empresa}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div *ngIf="displayEirl">
+   
+      <table style="width:100%">
+        <tr>
+          <th>Nombre</th>
+          <th>empresa</th>
+        </tr>
+        <tr *ngFor="let item of arrayTipoEirl">
+            <td>{{item.nombre}}</td>
+          <td>{{item.empresa}}</td>
+        </tr>
+      </table>
+    </div>
+    <div *ngIf="displaySon">
+
+        <table style="width:100%">
+            <tr>
+              <th>Nombre</th>
+              <th>Num. Hijos</th>
+            </tr>
+            <tr *ngFor="let item of arrayNumHijos">
+              <td>{{item.nombre}}</td>
+              <td> {{item.numhijos}}</td>
+              
+            </tr>
+         
+          </table>
+      <!-- </div> -->
+    </div>
+    <div *ngIf="displayPay">
+
+      <table style="width:100%">
+        <tr>
+          <th>Nombre</th>
+          <th>pagos</th>
+          
+        </tr>
+        <tr *ngFor="let item of arrayUsuariosPagos">
+          <td>{{item.nombre}}</td>
+          <td>si pago</td>
+        </tr>
+      </table>
+    </div>
+    <div *ngIf="displayNotPay">
+      <table style="width:100%">
+        <tr>
+          <th>Nombre</th>
+          <th>pagos</th>
+        </tr>
+        <tr *ngFor="let item of arrayUsuariosNoPagos">
+          <td>{{item.nombre}}</td>
+          <td>no pago</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

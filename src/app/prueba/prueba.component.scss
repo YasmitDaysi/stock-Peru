@@ -1,0 +1,86 @@
+.container {
+    display: column;
+    
+
+  .ordenar {
+    display:flex;
+   padding: 13px;
+   justify-content: center;
+    margin-top: 40px;
+
+    button {
+      padding: 12px;
+      margin: 5px;
+      
+    }
+    .orderByTypeSac{
+        background-color:rgb(216, 113, 172);
+        border-radius: 15px; 
+        border: 0px solid;
+        width: 200px;
+
+    }
+    .orderByTypeEirl{
+        border-radius: 15px; 
+        background-color:rgb(150, 123, 221);
+        border: 0px solid;
+        border: 0px solid;
+        width: 200px;
+
+
+
+    }
+    .sortBySon{
+        background-color:rgb(74, 207, 173);
+        border-radius: 15px; 
+        border: 0px solid;
+        width: 200px;
+
+  }
+  .userOrderByPayment{
+    background-color:rgb(78, 193, 232);
+    border-radius: 15px; 
+    border: 0px solid;
+    width: 200px;
+  }
+  .usersNotPay{
+    background-color:rgb(255, 207, 84);
+    border-radius: 15px; 
+    border: 0px solid;
+    width: 200px;
+  }
+ 
+}
+}
+.usersNotPay, .userOrderByPayment, .sortBySon, .orderByTypeEirl, .orderByTypeSac:focus{
+  outline: none;
+}
+.result{
+    display:flex;
+    justify-content: center;
+    margin-top: 60px;
+    
+  }
+  td {
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 8px;
+  }
+  
+table, th {
+    border-bottom:  1px solid rgb(60, 167, 96);
+    border-collapse: collapse;
+   
+    ;
+  }
+p{ 
+    color:white;
+    text-align: center;
+    font-size: 15px;
+}
+h1{ 
+  text-align: center;
+  margin-top: 50px;
+  font-size: xxx-large;
+  color: rgb(157, 53, 50);
+}
